@@ -1,0 +1,246 @@
+$grey: rgba(200,201,216,1);
+$grey-light: rgba(242,244,245,1);
+$grey-dark: rgba(99,99,99,1);
+$grey-dark-opac: rgba(99,99,99,0.5);
+$input-border-grey: rgba(204,204,204,1);
+$font-color: rgba(55,61,63,1);
+$white: rgba(255,255,255,1);
+
+$green: rgba(82,164,148,1);
+$green-opac: rgba(82,164,148,0.9);
+$title-green: rgba(79,125,122,1);
+$site-background: rgba(245,245,243,1);
+$light-green: rgba(164,230,142,1);
+$dark-green: rgba(45,90,81,1);
+$dark-green-opac: rgba(45,90,81,0.7);
+$banner-color: rgba(45,90,81,0.2);
+$success-green: rgba(52,207,0,1);
+$dashboard-green: rgba(45,90,81,0.5);
+
+$blue: rgba(73, 90, 140,0.9); /*404E77*/
+
+$red: rgba(222,82,82,1); /*EB6565*/
+$red-opac: rgba(242,102,102,1);
+$danger-red: rgba(222,56,0,1);
+
+$button_shadow: 1px 1px 1px $font-color;
+$resting_shadow_light: 1px 1px 6px rgba(204,204,204,1);
+$container_shadow: 0 0 50px $grey-dark-opac;
+
+$gradient-right: linear-gradient(
+  to right,
+  $green 0%,
+  $blue 75%
+);
+
+
+body {
+  background: $site-background;
+}
+
+.container {
+  background: $white;
+  -webkit-box-shadow: $container_shadow;
+          box-shadow: $container_shadow;
+}
+
+footer {
+  border-top: 1px solid $green;
+}
+
+a,
+.span_link {
+  color: $dark-green;
+  &:hover {
+    color:  $dark-green-opac;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  &:hover,
+  &.active,
+  &:focus {
+    color: $dark-green-opac;
+    text-decoration: none;
+    -webkit-transition: all ease-in 150ms;
+    transition: all ease-in 150ms;
+  }
+}
+
+.btn {
+   background: $blue;
+   color: $white;
+   border: none;
+   border-radius: 2px;
+   -webkit-box-shadow: $button_shadow;
+           box-shadow: $button_shadow;
+    &:hover,
+    &.active,
+    &:focus {
+      -webkit-box-shadow: inset 0 0 0 1px $blue;
+              box-shadow: inset 0 0 0 1px $blue ;
+      background: $white !important;
+      outline: none !important;
+      color: $blue;
+      -webkit-transition: all ease-in 100ms;
+      transition: all ease-in 100ms;
+    }
+}
+
+.btn-lg {
+  @extend .btn;
+  background: $white;
+  color: $blue;
+  &:hover,
+  &.active,
+  &:focus {
+    background: $green !important;
+    -webkit-box-shadow: inset 0 0 0 1px $white;
+            box-shadow: inset 0 0 0 1px $white ;
+    color: $white;
+  }
+}
+
+.title {
+  color: $title-green !important;
+}
+
+.navbar-default {
+  background: $white;
+  border-top: 0;
+  border-bottom: 1px solid $green;
+  border-left: 0;
+  border-right: 0;
+  .navbar-collapse {
+    .navbar-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      li {
+        a {
+          @extend a;
+          &:hover,
+          &:active {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.element_background h4 {
+  border-bottom: 1px solid $dark-green;
+}
+
+.user_list,
+.admin_actions {
+  li {
+    border-bottom: 1px solid $dark-green;
+  }
+}
+
+.four_o_four_div .bee {
+  height: 238px;
+  width: 100%;
+  background: url('images/404_bee.png') center no-repeat;
+}
+
+.alert-danger,
+.alert-success {
+  border-radius: 0;
+}
+
+.alert-success {
+  background: $success-green;
+  color: $white;
+  .close {
+    color: $white;
+    opacity: 1;
+  }
+}
+
+.alert-danger {
+  background: $danger-red;
+  color: $white;
+  .close {
+    color: $white;
+    opacity: 1;
+  }
+}
+
+.banner {
+  background: $banner-color;
+   color: $white;
+  .close {
+    color: $white;
+    opacity: 1;
+  }
+}
+
+.signup_form,
+.signin_form,
+.pass_reset,
+.element_background {
+  background: $grey-light;
+  border-radius: 2px;
+}
+
+.dashboard_head > .col-sm-12 {
+  background: $dashboard-green;
+  .user_actions_link {
+    position: relative;
+    color: $white;
+    text-decoration: none;
+    padding: 0 !important;
+    &:hover {
+      color: $white;
+      cursor: pointer;
+    }
+  }
+
+  .user_actions_link:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: $white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .user_actions_link:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+.error {
+  color: $red;
+}
+
+hr.divider {
+  border: 0;
+  border-top: 2px solid $grey;
+}
+
+.close_div button {
+  background: $red;
+  color: $white;
+  &:hover,
+  &.active,
+  &:focus {
+    background: $white !important;
+    color: $red;
+    -webkit-box-shadow: inset 0 0 0 2px $red ;
+            box-shadow: inset 0 0 0 2px $red ;
+  }
+}

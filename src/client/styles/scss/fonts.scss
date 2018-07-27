@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url(./font_files/Nunito/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'NunitoEL';
+  src: url(./font_files/Nunito/Nunito-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: 'NunitoL';
+  src: url(./font_files/Nunito/Nunito-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Khula';
+  src: url(./font_files/Khula/Khula-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'KhulaBold';
+  src: url(./font_files/Khula/Khula-Bold.ttf);
+}
+
+
+
+body {
+  font-family: 'Nunito', sans-serif;
+  letter-spacing: .5px;
+}
+
+a,
+.span_link,
+button {
+  letter-spacing: .75px;
+}
+
+p,
+label,
+a {
+  font-size: 16px;
+}
+
+p {
+  font-weight: 300;
+}
+
+label {
+  font-weight: 600;
+}
+
+h3 > a {
+  font-size: 24px;
+}
+
+a,
+span,
+label,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.btn-lg {
+  font-family: 'NunitoL', sans-serif;
+  font-weight: 300;
+}
+
+button,
+.action_btns > a,
+.action_btns > .span_link {
+  font-family: 'NunitoL', sans-serif;
+  font-weight: 100 !important;
+}
+
+ul > li,
+ol > li,
+.claims_p {
+  font-size: 15px;
+}
+
+.element_background {
+  ul:not(.forms_list) > li {
+    list-style: circle;
+  }
+}
+
+.label-success,
+.label-warning {
+  font-size: 12px !important;
+  font-weight: 100;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.btn-success:not(.btn-xs),
+.span_link,
+.alert-warning {
+  font-size: 14px;
+}
+
+.user_actions_link {
+  font-family: 'NunitoEL', sans-serif;
+  font-weight: 100;
+}
+
+.title {
+  font-family: 'KhulaBold', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  span {
+    font-family: 'Khula', sans-serif;
+    font-weight: 400;
+  }
+}
+
+.navbar-default {
+  .beta {
+    font-size: 12px;
+  }
+}
+
+.user_list {
+  li {
+    p {
+      font-size: 16px;
+    }
+    span {
+      font-size: 14px;
+    }
+    p:nth-of-type(2),
+    p:nth-of-type(3) {
+      font-size: 14px;
+    }
+  }
+}
+
+.banner {
+  p {
+    font-size: 18px;
+    font-family: 'NunitoEL', sans-serif;
+    font-weight: 200;
+  }
+}
+
+.error {
+  font-size: 16px;
+}
